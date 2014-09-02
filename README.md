@@ -1,0 +1,4 @@
+phuzsh
+======
+
+My terminal setup
