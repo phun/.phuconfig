@@ -60,9 +60,10 @@
     // Terminal
     "terminal.integrated.cursorBlinking": true,
     //-----------------------------------------------------
-    /** FORMATTING **/
+    /** FORMATTING AND SAVING **/
     //-----------------------------------------------------
     "editor.formatOnSave": true,
+    "files.autoSave": "off",
     "files.insertFinalNewline": true,
     "namespaceResolver.sortAlphabetically": true,
     "prettier.tabWidth": 4,
