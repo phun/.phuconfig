@@ -7,6 +7,16 @@ This repository contains my settings and configurations for my development suite
 - vim: terminal text editor
 - VS Code: IDE
 
+## zsh
+
+<img width="754" alt="Screenshot 2023-06-18 at 12 53 35 AM" src="https://github.com/phun/.phuconfig/assets/410858/5a508617-7ee4-4e48-9d49-58621249cce3">
+
+### Features
+- Beautiful UI via `romkatv/powerlevel10`
+- Suggests commands via `zsh-autosuggestions`
+- Syntax highlighting via `zsh-syntax-highlighting`
+- Minimal performance costs compared to oh-my-zsh
+
 ## iTerm2
 ### Setup
 1. Open Preferences (OSX: <kbd>Cmd</kbd>+<kbd>,</kbd>)
