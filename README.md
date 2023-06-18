@@ -16,6 +16,7 @@ This repository contains my settings and configurations for my development suite
 - Suggests commands via `zsh-autosuggestions`
 - Syntax highlighting via `zsh-syntax-highlighting`
 - Minimal performance costs compared to oh-my-zsh
+- Package management via `antigen`
 
 ## iTerm2
 ### Setup
