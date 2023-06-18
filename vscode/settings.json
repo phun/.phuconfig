@@ -87,7 +87,19 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    //-----------------------------------------------------
+    /** GITLENS **/
+    //-----------------------------------------------------
     "gitlens.menus": {
         "editorGroup": false
-    }
+    },
+    //-----------------------------------------------------
+    /** VIM (as backup (ex. for codespaces)) **/
+    //-----------------------------------------------------
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ]
 }
