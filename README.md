@@ -2,10 +2,13 @@ PHUBAR Development Suite
 ======
 
 This repository contains my settings and configurations for my development suite which consists of:
-- iTerm2: terminal
-- zsh: shell
-- vim: terminal text editor
-- VS Code: IDE
+- Terminal setup:
+    - **zsh:** shell
+    - **iTerm2:** terminal
+    - **vim:** lightweight text editor
+    - **neovim:** feature-rich text editor
+- **VS Code:** feature-rich IDE
+- **Karabiner-Elements:** OSX keybinding customizer
 
 ## zsh
 <p align="center">
@@ -30,10 +33,7 @@ This repository contains my settings and configurations for my development suite
 3. Select the `Profile` tab and import `phubar-dev-suite//iterm2/PHUBAR.json`
 
 ## vim
-My `.vimrc` contains no dependencies and is fully compatible with `vim` and `neovim`.
-
-It is lightweight so that you can safely copy the configuration to any machine without installing additional plugins.
-
+My `.vimrc` contains no dependencies and is fully compatible with `vim` and `neovim`.  It is lightweight so that you can safely copy the configuration to any machine without installing additional plugins.
 For a feature-rich experience, install my `neovim` setup. _(coming soon!)_.
 
 ### Setup
@@ -42,8 +42,16 @@ For a feature-rich experience, install my `neovim` setup. _(coming soon!)_.
 ## VS Code
 ### Setup
 #### User Settings
-1. Open the Command Palette (OSX: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) and run `Preferences: Open User Settings (JSON)`
+1. Open the Command Palette (OSX: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd>) and run `Preferences: Open User Settings (JSON)`
 2. Replace contents with that in `phubar-dev-suite/vscode/settings.json`
 #### Keyboard Shortcuts
-1. Open the Command Palette (OSX: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) and run `Preferences: Open Keyboard Shortcuts (JSON)`
+1. Open the Command Palette (OSX: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd>) and run `Preferences: Open Keyboard Shortcuts (JSON)`
 2. Replace contents with that in `phubar-dev-suite/vscode/keybindings.json`
+
+## Karabiner-Elements
+### Features
+- Maps (<kbd>Fn</kbd> + <kbd>h</kbd> <kbd>j</kbd> <kbd>k</kbd> <kbd>l</kbd>) to <kbd>←</kbd> <kbd>↓</kbd> <kbd>↑</kbd> <kbd>→</kbd>
+- Maps (<kbd>Fn</kbd> + <kbd>x</kbd>) to <kbd>Esc</kbd>
+### Setup
+1. Copy the complex modifications with: `cp -R phubar-dev-suite/.config/karabiner/assets/ ~/.config/karabiner`
+2. Open Karabiner-Elements and under `Complex Modifications`, add the rule by enabling it
