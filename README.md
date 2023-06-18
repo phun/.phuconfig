@@ -19,17 +19,31 @@ This repository contains my settings and configurations for my development suite
 - Minimal performance costs compared to oh-my-zsh
 - Package management via `antigen`
 
+### Setup
+1. Replace your `~/.zshrc` with `phubar-dev-suite/.zshrc`
+2. In your existing `zsh` shell, run `source ~/.zshrc`. Or, close it and open a new shell to automatically initialize one with the new config.
+
 ## iTerm2
 ### Setup
 1. Open Preferences (OSX: <kbd>Cmd</kbd>+<kbd>,</kbd>)
 2. Select the `Appearance` tab and under `General`, change the theme to `Minimal`
-3. Select the `Profile` tab and import `/iterm2/PHUBAR.json`
+3. Select the `Profile` tab and import `phubar-dev-suite//iterm2/PHUBAR.json`
+
+## vim
+My `.vimrc` contains no dependencies and is fully compatible with `vim` and `neovim`.
+
+It is lightweight so that you can safely copy the configuration to any machine without installing additional plugins.
+
+For a feature-rich experience, install my `neovim` setup. _(coming soon!)_.
+
+### Setup
+1. Replace your `~/.vimrc` with `phubar-dev-suite/.vimrc`
 
 ## VS Code
 ### Setup
 #### User Settings
 1. Open the Command Palette (OSX: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) and run `Preferences: Open User Settings (JSON)`
-2. Replace contents with that in `/vscode/settings.json`
+2. Replace contents with that in `phubar-dev-suite/vscode/settings.json`
 #### Keyboard Shortcuts
 1. Open the Command Palette (OSX: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) and run `Preferences: Open Keyboard Shortcuts (JSON)`
-2. Replace contents with that in `/vscode/keybindings.json`
+2. Replace contents with that in `phubar-dev-suite/vscode/keybindings.json`
