@@ -8,8 +8,9 @@ This repository contains my settings and configurations for my development suite
 - VS Code: IDE
 
 ## zsh
-
-<img width="754" alt="Screenshot 2023-06-18 at 12 53 35 AM" src="https://github.com/phun/.phuconfig/assets/410858/5a508617-7ee4-4e48-9d49-58621249cce3">
+<p align="center">
+    <img width="754" alt="Screenshot 2023-06-18 at 12 53 35 AM" src="https://github.com/phun/.phuconfig/assets/410858/5a508617-7ee4-4e48-9d49-58621249cce3">
+</p>
 
 ### Features
 - Beautiful UI via `romkatv/powerlevel10`
