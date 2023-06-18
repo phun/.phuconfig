@@ -91,6 +91,8 @@
     //-----------------------------------------------------
     /** GITLENS **/
     //-----------------------------------------------------
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
     "gitlens.menus": {
         "editorGroup": false
     },
