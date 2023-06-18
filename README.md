@@ -33,8 +33,13 @@ This repository contains my settings and configurations for my development suite
 3. Select the `Profile` tab and import `phubar-dev-suite//iterm2/PHUBAR.json`
 
 ## vim
+
+<p align="center">
+    <img width="810" alt="Screenshot 2023-06-18 at 3 40 24 AM" src="https://github.com/phun/phubar-dev-suite/assets/410858/72c338b1-f223-49cc-bbf0-b1effc8e9b34">
+</p>
+    
 My `.vimrc` contains no dependencies and is fully compatible with `vim` and `neovim`.  It is lightweight so that you can safely copy the configuration to any machine without installing additional plugins.
-For a feature-rich experience, install my `neovim` setup. _(coming soon!)_.
+For a feature-rich experience, install my `neovim` setup _(coming soon!)_.
 
 ### Setup
 1. Replace your `~/.vimrc` with `phubar-dev-suite/.vimrc`
