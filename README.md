@@ -5,8 +5,8 @@ This repository contains my settings and configurations for my development suite
 - Terminal setup:
     - **zsh:** shell
     - **iTerm2:** terminal
-    - **vim:** lightweight text editor
     - **neovim:** feature-rich text editor
+    - **vim:** lightweight text editor
 - **VS Code:** feature-rich IDE
 - **Karabiner-Elements:** OSX keybinding customizer
 
@@ -30,8 +30,15 @@ This repository contains my settings and configurations for my development suite
 ## iTerm2
 ### Setup
 1. Open Preferences (OSX: <kbd>Cmd</kbd>+<kbd>,</kbd>)
-2. Select the `Appearance` tab and under `General`, change the theme to `Minimal`
+2. Select the `Appearance` tab and under `General`, change the theme to `Compact`
+
 3. Select the `Profile` tab and import `phubar-dev-suite//iterm2/PHUBAR.json`
+
+## neovim
+
+<p align="center">
+    <img width="1074" alt="Screenshot 2023-06-19 at 12 10 58 AM" src="https://github.com/phun/phubar-dev-suite/assets/410858/887a9136-db45-465f-92a2-05ff647109a0">
+</p>
 
 ## vim
 
@@ -46,6 +53,11 @@ For a feature-rich experience, install my `neovim` setup _(coming soon!)_.
 1. Replace your `~/.vimrc` with `phubar-dev-suite/.vimrc`
 
 ## VS Code
+
+<p align="center">
+    <img width="1136" alt="Screenshot 2023-06-19 at 12 06 53 AM" src="https://github.com/phun/phubar-dev-suite/assets/410858/571dde21-d209-4e9e-ae22-48608d55b034">
+</p>
+
 ### Setup
 #### User Settings
 1. Open the Command Palette (OSX: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd>) and run `Preferences: Open User Settings (JSON)`
