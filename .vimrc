@@ -14,22 +14,42 @@ set number
 set encoding=utf-8
 setglobal fileencoding=utf-8
 
+" Background color
+highlight Normal guibg=#24242E
+
 " Highlight current line
 augroup CursorLine
   au!
   au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
   au WinLeave * setlocal nocursorline
 augroup END
-highlight CursorLine cterm=NONE ctermbg=black
+highlight CursorLine cterm=NONE ctermbg=black guibg=#373746
 
 " Show column on 81st character
 " set cc=81
 highlight ColorColumn ctermbg=8 guibg=#393947
 
-" Display formatted status line always
-set laststatus=2
-set statusline=%F%m%r%h%w\%=[L:\%l/%L\ C:\%c\ P:\%p%%]
-highlight StatusLine ctermfg=2
+if has('nvim')
+  " Plugins only for neovim to keep vim lightweight
+  let data_dir = '~/.vim'
+  if empty(glob(data_dir . '/autoload/plug.vim'))
+    silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  endif
+
+  call plug#begin()
+  " Explorer
+  Plug 'nvim-tree/nvim-web-devicons' " optional
+  Plug 'nvim-tree/nvim-tree.lua'
+  call plug#end()
+
+  " Reload .vimrc and :PlugInstall to install plugins.
+else
+  " Display formatted status line in vim
+  set laststatus=2
+  set statusline=%F%m%r%h%w\%=[L:\%l/%L\ C:\%c\ P:\%p%%]
+  highlight StatusLine ctermfg=2
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FORMATTING
