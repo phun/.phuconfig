@@ -24,6 +24,7 @@ This repository contains my settings and configurations for my development suite
 
 ### Setup
 1. Replace your `~/.zshrc` with `phubar-dev-suite/.zshrc`
+1. Run: `cp -R phubar-dev-suite/.zsh ~/`
 2. In your existing `zsh` shell, run `source ~/.zshrc`. Or, close it and open a new shell to automatically initialize one with the new config.
 
 ## iTerm2
