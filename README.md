@@ -37,7 +37,7 @@ This repository contains my settings and configurations for my development suite
 ## neovim
 
 <p align="center">
-    <img width="1074" alt="Screenshot 2023-06-19 at 12 10 58 AM" src="https://github.com/phun/phubar-dev-suite/assets/410858/887a9136-db45-465f-92a2-05ff647109a0">
+    <img width="1098" alt="Screenshot 2023-06-19 at 12 16 32 AM" src="https://github.com/phun/phubar-dev-suite/assets/410858/cbb18b65-5ffc-49a3-a2fb-7b30c9c1ef9e">
 </p>
 
 ## vim
