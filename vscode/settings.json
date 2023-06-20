@@ -57,8 +57,11 @@
     // Explorer
     "explorer.compactFolders": false,
     "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
     // Terminal
     "terminal.integrated.cursorBlinking": true,
+    // Extensions
+    "extensions.ignoreRecommendations": true,
     //-----------------------------------------------------
     /** FORMATTING AND SAVING **/
     //-----------------------------------------------------

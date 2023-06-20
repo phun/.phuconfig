@@ -18,7 +18,26 @@ end
 
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
-require "plugins"
+if (vim.g.vscode) then
+  -- VSCode extension
+else
+  require "plugins"
+
+  -- NVIM-TREE SETUP
+  -----------------------------------------------------
+  -- disable netrw at the very start of your init.lua
+  vim.g.loaded_netrw = 1
+  vim.g.loaded_netrwPlugin = 1
+
+  -- set termguicolors to enable highlight groups
+  vim.opt.termguicolors = true
+
+  require("nvim-tree").setup({
+    view = {
+      side = "right"
+    }
+  })
+end
 
 -- Load .vimrc
 vim.cmd([[
@@ -26,19 +45,3 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
 ]])
-
--- NVIM-TREE SETUP
------------------------------------------------------
--- disable netrw at the very start of your init.lua
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
--- set termguicolors to enable highlight groups
-vim.opt.termguicolors = true
-
--- empty setup using defaults
-require("nvim-tree").setup({
-  view = {
-    side = "right"
-  }
-})

@@ -9,11 +9,13 @@
     },
     {
         "key": "ctrl+j",
-        "command": "workbench.action.navigateDown"
+        "command": "workbench.action.navigateDown",
+        "when": "neovim.mode != visual"
     },
     {
         "key": "ctrl+k",
-        "command": "workbench.action.navigateUp"
+        "command": "workbench.action.navigateUp",
+        "when": "neovim.mode != visual"
     },
     {
         "key": "ctrl+l",
@@ -134,6 +136,34 @@
         "command": "vscode-neovim.compositeEscape2",
         "when": "neovim.mode == insert && editorTextFocus",
         "args": "k"
+    },
+    {
+        // Map CMD+/ to uncomment
+        "key": "cmd+/",
+        "command": "vscode-neovim.send",
+        "when": "editorTextFocus && neovim.init && neovim.mode == visual",
+        "args": "<C-/>"
+    },
+    {
+        // Map CMD+A to select all
+        "key": "cmd+A",
+        "command": "vscode-neovim.send",
+        "when": "editorTextFocus && neovim.init && neovim.mode == normal",
+        "args": "<C-A>"
+    },
+    {
+        // Map CMD+C to copy to system clipboard
+        "key": "cmd+C",
+        "command": "vscode-neovim.send",
+        "when": "editorTextFocus && neovim.init && neovim.mode == visual",
+        "args": "\"+y"
+    },
+    {
+        // Map CMD+V to paste from system clipboard
+        "key": "cmd+V",
+        "command": "vscode-neovim.send",
+        "when": "editorTextFocus && neovim.init && neovim.mode == normal",
+        "args": "\"+p"
     },
     //-----------------------------------------------------
     /** GITLENS **/
