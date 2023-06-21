@@ -10,56 +10,59 @@ syntax on
 " Display line numbers
 set number
 
+" Prevent scrolling beyond last line
+set scrolloff=500
+
 " Display encoding correctly
 set encoding=utf-8
 setglobal fileencoding=utf-8
 
 " Background color
 if !exists('g:vscode')
-  highlight Normal guibg=#24242E
+    highlight Normal guibg=#24242E
 endif
 
 " Highlight current line
 if !exists('g:vscode')
-  augroup CursorLine
-    au!
-    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-    au WinLeave * setlocal nocursorline
-  augroup END
-  highlight CursorLine cterm=NONE ctermbg=black guibg=#373746
+    augroup CursorLine
+        au!
+        au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+        au WinLeave * setlocal nocursorline
+    augroup END
+    highlight CursorLine cterm=NONE ctermbg=black guibg=#373746
 endif
 
 " Show column on 81st character
 " set cc=81
 if !exists('g:vscode')
-  highlight ColorColumn ctermbg=8 guibg=#393947
+    highlight ColorColumn ctermbg=8 guibg=#393947
 endif
 
 if !exists('g:vscode')
-  if has('nvim')
-    " Plugins only for neovim to keep vim lightweight
-    let data_dir = '~/.vim'
-    if empty(glob(data_dir . '/autoload/plug.vim'))
-      silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-      autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    if has('nvim')
+        " Plugins only for neovim to keep vim lightweight
+        let data_dir = '~/.vim'
+        if empty(glob(data_dir . '/autoload/plug.vim'))
+            silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+            autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+        endif
+
+        call plug#begin()
+        " Explorer
+        Plug 'nvim-tree/nvim-web-devicons' " optional
+        Plug 'nvim-tree/nvim-tree.lua'
+        " Search for file
+        Plug 'nvim-lua/plenary.nvim'
+        Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+        call plug#end()
+
+        " Reload .vimrc and :PlugInstall to install plugins.
+    else
+        " Display formatted status line in vim
+        set laststatus=2
+        set statusline=%F%m%r%h%w\%=[L:\%l/%L\ C:\%c\ P:\%p%%]
+        highlight StatusLine ctermfg=2
     endif
-
-    call plug#begin()
-    " Explorer
-    Plug 'nvim-tree/nvim-web-devicons' " optional
-    Plug 'nvim-tree/nvim-tree.lua'
-    " Search for file
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
-    call plug#end()
-
-    " Reload .vimrc and :PlugInstall to install plugins.
-  else
-    " Display formatted status line in vim
-    set laststatus=2
-    set statusline=%F%m%r%h%w\%=[L:\%l/%L\ C:\%c\ P:\%p%%]
-    highlight StatusLine ctermfg=2
-  endif
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -96,6 +99,9 @@ nnoremap <C-X> dd
 
 " Paste without yanking it (visual mode)
 xnoremap p "_dP
+
+" map 'i' to 'I' to insert in visual block mode without shift key
+vnoremap i I
 
 " CTRL + HJKL to move between splits
 nmap <silent> <C-K> :wincmd k<CR>
