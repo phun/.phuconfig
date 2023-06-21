@@ -35,7 +35,6 @@ if !exists('g:vscode')
   highlight ColorColumn ctermbg=8 guibg=#393947
 endif
 
-
 if !exists('g:vscode')
   if has('nvim')
     " Plugins only for neovim to keep vim lightweight
@@ -87,15 +86,13 @@ inoremap jk <Esc>
 " Retain cursor position after yanking
 vmap y ygv<Esc>
 
-" Delete without yanking it (normal mode)
+" Delete without yanking it (normal/visual mode)
+" If you want to cut, use 'x' instead of 'd' after selecting lines
+vnoremap d "_d
 nnoremap d "_d
 
 " CTRL+'x' to cut (delete and yank) b/c i use 'd' to delete chars
 nnoremap <C-X> dd
-
-" Delete without yanking it (visual and select mode)
-" If you want to cut, use 'x' instead of 'd' after selecting lines
-vnoremap d "_d
 
 " Paste without yanking it (visual mode)
 xnoremap p "_dP
@@ -110,11 +107,11 @@ nmap <silent> <C-L> :wincmd l<CR>
 vnoremap <C-J> :m '>+1<CR>gv=gv
 vnoremap <C-K> :m '<-2<CR>gv=gv
 
-" <leader>Y to yank to system keyboard
-vmap <leader>Y "+y
+" <leader>Y to yank to system clipboard
+vmap <leader>y "+y
 
-" <leader>P to paste from system keyboard
-nnoremap <leader>P "+p
+" <leader>P to paste from system clipboard
+nnoremap <leader>p "+p
 
 " CTRL+A to select all (normal mode)
 nmap <C-A> ggVG<CR>

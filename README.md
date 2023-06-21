@@ -40,6 +40,17 @@ This repository contains my settings and configurations for my development suite
     <img width="1098" alt="Screenshot 2023-06-19 at 12 16 32 AM" src="https://github.com/phun/phubar-dev-suite/assets/410858/cbb18b65-5ffc-49a3-a2fb-7b30c9c1ef9e">
 </p>
 
+### Keybindings and remaps
+
+- <kbd>d</kbd>: Remapped to delete without yanking. Use <kbd>Ctrl</kbd>+<kbd>x</kbd> for original cut action
+- <kbd>j</kbd>+<kbd>k</kbd>: maps to <kbd>Esc</ksc>
+- <kbd>Ctrl</kbd>+<kbd>x</kbd>: cuts (deletes and yanks) selection
+- <kbd>Ctrl</kbd>+<kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd>: move left,down,up, or right between splits
+- <kbd>Ctrl</kbd>+<kbd>j</kbd><kbd>k</kbd> (visual mode): move selected lines up and down
+- <kbd>Ctrl</kbd>+<kbd>a</kbd>(normal mode): select all
+- <kbd>Spacebar</kbd>+<kbd>y</kbd>(visual mode): yank to system clipboard
+- <kbd>Spacebar</kbd>+<kbd>p</kbd>(visual mode): paste from system clipboard
+
 ## vim
 
 <p align="center">
@@ -65,6 +76,13 @@ For a feature-rich experience, install my `neovim` setup _(coming soon!)_.
 #### Keyboard Shortcuts
 1. Open the Command Palette (OSX: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd>) and run `Preferences: Open Keyboard Shortcuts (JSON)`
 2. Replace contents with that in `phubar-dev-suite/vscode/keybindings.json`
+#### Extensions
+- [VSCode Neovim](https://marketplace.visualstudio.com/items?itemName=asvetliakov.vscode-neovim): Use neovim movements for better muscle memory between editors
+- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme): Better icons for files and directories
+- [Panda Theme](https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda): Base theme that I modify in `settings.json`
+- [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces): Highlight trailing spaces and delete them
+- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens): Easily look at old versions of files & commits
+- [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments): Better display of comments
 
 ## Karabiner-Elements
 ### Features
